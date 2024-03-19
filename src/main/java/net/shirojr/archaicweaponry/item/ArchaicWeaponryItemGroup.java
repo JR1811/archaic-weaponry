@@ -45,7 +45,7 @@ public class ArchaicWeaponryItemGroup {
     }
 
     public static void initialize() {
-        LoggerUtil.devLogger("Registering " + ArchaicWeaponry.MODID + " ItemGroups");
+        LoggerUtil.devLogger("Registering %s ItemGroups".formatted(ArchaicWeaponry.MODID));
         initializeItemGroups();
     }
 }

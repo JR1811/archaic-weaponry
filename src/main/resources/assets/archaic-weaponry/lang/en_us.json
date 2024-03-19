@@ -1,4 +1,5 @@
 {
   "itemgroup.archaic_weaponry": "Archaic Weaponry",
-  "sound.archaic-weaponry.guillotine.cut": "Guillotine cut"
+  "sound.archaic-weaponry.guillotine.empty": "Guillotine Sound",
+  "sound.archaic-weaponry.guillotine.flesh": "Guillotine Cut"
 }

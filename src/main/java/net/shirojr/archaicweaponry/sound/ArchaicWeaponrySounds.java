@@ -8,7 +8,8 @@ import net.shirojr.archaicweaponry.ArchaicWeaponry;
 import net.shirojr.archaicweaponry.util.LoggerUtil;
 
 public class ArchaicWeaponrySounds {
-    public static SoundEvent GUILLOTINE_CUT = of("guillotine_cut");
+    public static SoundEvent GUILLOTINE_EMPTY = of("guillotine_empty");
+    public static SoundEvent GUILLOTINE_FLESH = of("guillotine_flesh");
 
     static SoundEvent of(String id) {
         Identifier identifier = new Identifier(ArchaicWeaponry.MODID, id);
@@ -16,6 +17,6 @@ public class ArchaicWeaponrySounds {
     }
 
     public static void initialize() {
-        LoggerUtil.devLogger("Registering " + ArchaicWeaponry.MODID + " Sounds");
+        LoggerUtil.devLogger("Registering %s Sounds".formatted(ArchaicWeaponry.MODID));
     }
 }

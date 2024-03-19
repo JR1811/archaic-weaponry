@@ -1,8 +1,14 @@
 {
-  "guillotine_cut": {
-    "subtitle": "sound.archaic-weaponry.guillotine.cut",
+  "guillotine_empty": {
+    "subtitle": "sound.archaic-weaponry.guillotine.empty",
     "sounds": [
-      "archaic-weaponry:guillotine_cut"
+      "archaic-weaponry:guillotine_empty"
+    ]
+  },
+  "guillotine_flesh": {
+    "subtitle": "sound.archaic-weaponry.guillotine.flesh",
+    "sounds": [
+      "archaic-weaponry:guillotine_flesh"
     ]
   }
 }

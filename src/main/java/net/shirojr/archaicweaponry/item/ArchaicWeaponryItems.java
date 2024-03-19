@@ -16,6 +16,6 @@ public class ArchaicWeaponryItems {
     }
 
     public static void initialize() {
-        LoggerUtil.devLogger("Registering " + ArchaicWeaponry.MODID + " Items");
+        LoggerUtil.devLogger("Registering %s Items".formatted(ArchaicWeaponry.MODID));
     }
 }
