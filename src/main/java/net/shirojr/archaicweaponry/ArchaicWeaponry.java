@@ -7,8 +7,6 @@ import net.shirojr.archaicweaponry.item.ArchaicWeaponryItemGroup;
 import net.shirojr.archaicweaponry.item.ArchaicWeaponryItems;
 import net.shirojr.archaicweaponry.sound.ArchaicWeaponrySounds;
 import net.shirojr.archaicweaponry.util.LoggerUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ArchaicWeaponry implements ModInitializer {
     public static final String MODID = "archaic-weaponry";
