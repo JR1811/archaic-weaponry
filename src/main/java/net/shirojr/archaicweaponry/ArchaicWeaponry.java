@@ -1,10 +1,10 @@
 package net.shirojr.archaicweaponry;
 
 import net.fabricmc.api.ModInitializer;
-import net.shirojr.archaicweaponry.block.ArchaicWeaponryBlocks;
-import net.shirojr.archaicweaponry.blockentity.ArchaicWeaponryBlockEntities;
-import net.shirojr.archaicweaponry.item.ArchaicWeaponryItemGroup;
-import net.shirojr.archaicweaponry.item.ArchaicWeaponryItems;
+import net.shirojr.archaicweaponry.registry.ArchaicWeaponryBlocks;
+import net.shirojr.archaicweaponry.registry.ArchaicWeaponryBlockEntities;
+import net.shirojr.archaicweaponry.registry.ArchaicWeaponryItemGroup;
+import net.shirojr.archaicweaponry.registry.ArchaicWeaponryItems;
 import net.shirojr.archaicweaponry.sound.ArchaicWeaponrySounds;
 import net.shirojr.archaicweaponry.util.LoggerUtil;
 

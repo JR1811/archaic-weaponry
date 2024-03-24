@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,guillotine_part=foot": {
+      "model": "archaic-weaponry:block/guillotine_foot",
+      "y": 90
+    },
+    "facing=east,guillotine_part=head": {
+      "model": "archaic-weaponry:block/guillotine_head",
+      "y": 90
+    },
+    "facing=east,guillotine_part=mid": {
+      "model": "archaic-weaponry:block/guillotine_mid",
+      "y": 90
+    },
+    "facing=east,guillotine_part=top": {
+      "model": "archaic-weaponry:block/guillotine_top",
+      "y": 90
+    },
+    "facing=north,guillotine_part=foot": {
+      "model": "archaic-weaponry:block/guillotine_foot"
+    },
+    "facing=north,guillotine_part=head": {
+      "model": "archaic-weaponry:block/guillotine_head"
+    },
+    "facing=north,guillotine_part=mid": {
+      "model": "archaic-weaponry:block/guillotine_mid"
+    },
+    "facing=north,guillotine_part=top": {
+      "model": "archaic-weaponry:block/guillotine_top"
+    },
+    "facing=south,guillotine_part=foot": {
+      "model": "archaic-weaponry:block/guillotine_foot",
+      "y": 180
+    },
+    "facing=south,guillotine_part=head": {
+      "model": "archaic-weaponry:block/guillotine_head",
+      "y": 180
+    },
+    "facing=south,guillotine_part=mid": {
+      "model": "archaic-weaponry:block/guillotine_mid",
+      "y": 180
+    },
+    "facing=south,guillotine_part=top": {
+      "model": "archaic-weaponry:block/guillotine_top",
+      "y": 180
+    },
+    "facing=west,guillotine_part=foot": {
+      "model": "archaic-weaponry:block/guillotine_foot",
+      "y": 270
+    },
+    "facing=west,guillotine_part=head": {
+      "model": "archaic-weaponry:block/guillotine_head",
+      "y": 270
+    },
+    "facing=west,guillotine_part=mid": {
+      "model": "archaic-weaponry:block/guillotine_mid",
+      "y": 270
+    },
+    "facing=west,guillotine_part=top": {
+      "model": "archaic-weaponry:block/guillotine_top",
+      "y": 270
+    }
+  }
+}

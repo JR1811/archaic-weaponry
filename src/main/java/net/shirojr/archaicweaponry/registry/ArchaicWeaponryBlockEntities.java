@@ -1,4 +1,4 @@
-package net.shirojr.archaicweaponry.blockentity;
+package net.shirojr.archaicweaponry.registry;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
@@ -7,8 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.shirojr.archaicweaponry.ArchaicWeaponry;
-import net.shirojr.archaicweaponry.block.ArchaicWeaponryBlocks;
-import net.shirojr.archaicweaponry.blockentity.custom.GuillotineBlockEntity;
+import net.shirojr.archaicweaponry.block.blockentity.GuillotineBlockEntity;
 import net.shirojr.archaicweaponry.util.LoggerUtil;
 
 public class ArchaicWeaponryBlockEntities {

@@ -1,4 +1,4 @@
-package net.shirojr.archaicweaponry.item;
+package net.shirojr.archaicweaponry.registry;
 
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;

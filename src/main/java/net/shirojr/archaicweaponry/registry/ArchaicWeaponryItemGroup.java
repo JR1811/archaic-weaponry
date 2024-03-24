@@ -1,4 +1,4 @@
-package net.shirojr.archaicweaponry.item;
+package net.shirojr.archaicweaponry.registry;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -30,22 +30,22 @@ public class ArchaicWeaponryItemGroup {
         return RegistryKey.of(RegistryKeys.ITEM_GROUP, groupIdentifier);
     }
 
-    private static void initializeItemGroups() {
+/*    private static void initializeItemGroups() {
         ItemGroupEvents.modifyEntriesEvent(ARCHAIC_WEAPONRY_ITEMGROUP).register(archaicWeaponryEntries -> {
             List<ItemStack> boatismList = Registries.ITEM.stream()
-                    /*.filter(item -> {
+                    *//*.filter(item -> {
                                 List<Item> ungroupedItems = List.of();  // <-- put items in here to ungroup
                                 if (!Registries.ITEM.getId(item).getNamespace().equals(ArchaicWeaponry.MODID)) return false;
                                 return !ungroupedItems.contains(item);
                             }
-                    )*/
+                    )*//*
                     .map(Item::getDefaultStack).toList();
             archaicWeaponryEntries.addAll(boatismList);
         });
-    }
+    }*/
 
     public static void initialize() {
         LoggerUtil.devLogger("Registering %s ItemGroups".formatted(ArchaicWeaponry.MODID));
-        initializeItemGroups();
+        // initializeItemGroups();
     }
 }

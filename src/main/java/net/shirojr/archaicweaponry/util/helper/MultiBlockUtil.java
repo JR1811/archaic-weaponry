@@ -5,7 +5,7 @@ import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import net.shirojr.archaicweaponry.block.ArchaicWeaponryBlocks;
+import net.shirojr.archaicweaponry.registry.ArchaicWeaponryBlocks;
 
 import java.util.Arrays;
 import java.util.List;
@@ -66,6 +66,20 @@ public class MultiBlockUtil {
                         }
                     }
                     yield Optional.empty();
+                }
+            };
+        }
+
+        public Optional<BlockPos> getPartPosition(World world, BlockPos originPosition, GuillotinePart part) {
+            return switch (part) {
+                case TOP -> Optional.of(originPosition.offset(Direction.UP, 2));
+                case MID -> Optional.of(originPosition.offset(Direction.UP));
+                case HEAD -> Optional.of(originPosition);
+                case FOOT -> {
+                    if (getDirection(world, originPosition).isEmpty()) yield Optional.empty();
+                    else {
+                        yield Optional.of(originPosition.offset(getDirection(world, originPosition).get()));
+                    }
                 }
             };
         }
