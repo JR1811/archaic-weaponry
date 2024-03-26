@@ -122,4 +122,92 @@ public class GuillotineBlock extends BlockWithEntity {
         world.updateNeighbors(pos, Blocks.AIR);
         world.getBlockState(pos).updateNeighbors(world, pos, Block.NOTIFY_ALL);
     }
+
+    @Override
+    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        VoxelShape shape = VoxelShapes.empty();
+        switch (state.get(PART)) {
+            case FOOT -> {
+                switch (state.get(DIRECTION)) {
+                    case NORTH, SOUTH -> shape = VoxelShapes.union(shape,
+                            VoxelShapes.cuboid(0.0625, 0.25, 0, 0.9375, 0.5, 1));
+                    case EAST, WEST -> shape = VoxelShapes.union(shape,
+                            VoxelShapes.cuboid(0, 0.25, 0.0625, 1, 0.5, 0.9375));
+                }
+            }
+            case HEAD -> {
+                switch (state.get(DIRECTION)) {
+                    case NORTH -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0.25, 0, 0.9375, 0.5, 1));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.046875, 0, 0.859375, 0.203125, 1.0625, 1.015625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.796875, 0, 0.859375, 0.953125, 1.0625, 1.015625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.203125, 0.5, 0.890625, 0.796875, 1.0625, 0.921875));
+                    }
+                    case EAST -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0, 0.25, 0.0625, 1, 0.5, 0.9375));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.015625, 0, 0.046875, 0.140625, 1.0625, 0.203125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.015625, 0, 0.796875, 0.140625, 1.0625, 0.953125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.078125, 0.5, 0.203125, 0.109375, 1.0625, 0.796875));
+                    }
+                    case SOUTH -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.0625, 0.25, 0, 0.9375, 0.5, 1));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.796875, 0, -0.015625, 0.953125, 1.0625, 0.140625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.046875, 0, -0.015625, 0.203125, 1.0625, 0.140625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.203125, 0.5, 0.078125, 0.796875, 1.0625, 0.109375));
+                    }
+                    case WEST -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0, 0.25, 0.0625, 1, 0.5, 0.9375));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.859375, 0, 0.796875, 1.015625, 1.0625, 0.953125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.859375, 0, 0.046875, 1.015625, 1.0625, 0.203125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.890625, 0.5, 0.203125, 0.921875, 1.0625, 0.796875));
+                    }
+                }
+            }
+            case MID -> {
+                switch (state.get(DIRECTION)) {
+                    case NORTH -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.046875, 0.0625, 0.859375, 0.203125, 1, 1.015625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.796875, 0.0625, 0.859375, 0.953125, 1, 1.015625));
+                    }
+                    case EAST -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.015625, 0.0625, 0.046875, 0.140625, 1, 0.203125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.015625, 0.0625, 0.796875, 0.140625, 1, 0.953125));
+                    }
+                    case SOUTH -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.796875, 0.0625, -0.015625, 0.953125, 1, 0.140625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.046875, 0.0625, -0.015625, 0.203125, 1, 0.140625));
+                    }
+                    case WEST -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.859375, 0.0625, 0.796875, 1.015625, 1, 0.953125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.859375, 0.0625, 0.046875, 1.015625, 1, 0.203125));
+                    }
+                }
+            }
+            case TOP -> {
+                switch (state.get(DIRECTION)) {
+                    case NORTH -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.046875, 0, 0.859375, 0.203125, 0.8125, 1.015625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.796875, 0, 0.859375, 0.953125, 0.8125, 1.015625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0, 0.78125, 0.840625, 1, 0.9375, 1.0281250000000002));
+                    }
+                    case EAST -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.015625, 0, 0.046875, 0.140625, 0.8125, 0.203125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.015625, 0, 0.796875, 0.140625, 0.8125, 0.953125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(-0.028125000000000178, 0.78125, 0, 0.15937500000000004, 0.9375, 1));
+                    }
+                    case SOUTH -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.796875, 0, -0.015625, 0.953125, 0.8125, 0.140625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.046875, 0, -0.015625, 0.203125, 0.8125, 0.140625));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0, 0.78125, -0.028125000000000178, 1, 0.9375, 0.15937500000000004));
+                    }
+                    case WEST -> {
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.859375, 0, 0.796875, 1.015625, 0.8125, 0.953125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.859375, 0, 0.046875, 1.015625, 0.8125, 0.203125));
+                        shape = VoxelShapes.union(shape, VoxelShapes.cuboid(0.840625, 0.78125, 0, 1.0281250000000002, 0.9375, 1));
+                    }
+                }
+            }
+        }
+        return shape;
+    }
 }

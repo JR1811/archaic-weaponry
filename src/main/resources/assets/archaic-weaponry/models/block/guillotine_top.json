@@ -1,0 +1,80 @@
+{
+	"credit": "Made with Blockbench by ShiroJR",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "archaic-weaponry:block/guillotine",
+		"particle": "minecraft:block/spruce_planks"
+	},
+	"elements": [
+		{
+			"from": [0.75, 0, 13.75],
+			"to": [3.25, 12.5, 16.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 15.125]},
+			"faces": {
+				"north": {"uv": [1.625, 2.75, 1.875, 4.25], "texture": "#0"},
+				"east": {"uv": [1.375, 2.75, 1.625, 4.25], "texture": "#0"},
+				"south": {"uv": [2.125, 2.75, 2.375, 4.25], "texture": "#0"},
+				"west": {"uv": [1.875, 2.75, 2.125, 4.25], "texture": "#0"},
+				"up": {"uv": [1.875, 2.75, 1.625, 2.5], "texture": "#0"},
+				"down": {"uv": [2.125, 2.5, 1.875, 2.75], "texture": "#0"}
+			}
+		},
+		{
+			"from": [12.75, 0, 13.75],
+			"to": [15.25, 12.5, 16.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 15.125]},
+			"faces": {
+				"north": {"uv": [1.625, 2.75, 1.875, 4.25], "texture": "#0"},
+				"east": {"uv": [1.375, 2.75, 1.625, 4.25], "texture": "#0"},
+				"south": {"uv": [2.125, 2.75, 2.375, 4.25], "texture": "#0"},
+				"west": {"uv": [1.875, 2.75, 2.125, 4.25], "texture": "#0"},
+				"up": {"uv": [1.875, 2.75, 1.625, 2.5], "texture": "#0"},
+				"down": {"uv": [2.125, 2.5, 1.875, 2.75], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 12.5, 13.45],
+			"to": [16, 15, 16.45],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10, 15.125]},
+			"faces": {
+				"north": {"uv": [6.375, 1, 8.375, 1.25], "texture": "#0"},
+				"east": {"uv": [6, 1, 6.375, 1.25], "texture": "#0"},
+				"south": {"uv": [8.75, 1, 10.75, 1.25], "texture": "#0"},
+				"west": {"uv": [8.375, 1, 8.75, 1.25], "texture": "#0"},
+				"up": {"uv": [8.375, 1, 6.375, 0.625], "texture": "#0"},
+				"down": {"uv": [10.375, 0.625, 8.375, 1], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "guillotine",
+			"origin": [8, 0, 8],
+			"color": 0,
+			"nbt": "{}",
+			"children": [
+				{
+					"name": "plank",
+					"origin": [8, 0, 1.25],
+					"color": 0,
+					"nbt": "{}",
+					"children": []
+				},
+				{
+					"name": "blade",
+					"origin": [8, 0, 1.25],
+					"color": 0,
+					"nbt": "{}",
+					"children": []
+				},
+				{
+					"name": "frame",
+					"origin": [8, 0, 1.25],
+					"color": 0,
+					"nbt": "{}",
+					"children": [0, 1, 2]
+				}
+			]
+		}
+	]
+}

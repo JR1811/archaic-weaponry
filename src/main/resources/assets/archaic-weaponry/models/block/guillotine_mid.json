@@ -1,0 +1,67 @@
+{
+	"credit": "Made with Blockbench by ShiroJR",
+	"texture_size": [128, 128],
+	"textures": {
+		"0": "archaic-weaponry:block/guillotine",
+		"particle": "minecraft:block/spruce_planks"
+	},
+	"elements": [
+		{
+			"from": [0.75, 1, 13.75],
+			"to": [3.25, 16, 16.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 7.5, 15.25]},
+			"faces": {
+				"north": {"uv": [2.625, 2.75, 2.875, 4.625], "texture": "#0"},
+				"east": {"uv": [2.375, 2.75, 2.625, 4.625], "texture": "#0"},
+				"south": {"uv": [3.125, 2.75, 3.375, 4.625], "texture": "#0"},
+				"west": {"uv": [2.875, 2.75, 3.125, 4.625], "texture": "#0"},
+				"up": {"uv": [2.875, 2.75, 2.625, 2.5], "texture": "#0"},
+				"down": {"uv": [3.125, 2.5, 2.875, 2.75], "texture": "#0"}
+			}
+		},
+		{
+			"from": [12.75, 1, 13.75],
+			"to": [15.25, 16, 16.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14, 7.5, 15.25]},
+			"faces": {
+				"north": {"uv": [2.625, 2.75, 2.875, 4.625], "texture": "#0"},
+				"east": {"uv": [2.375, 2.75, 2.625, 4.625], "texture": "#0"},
+				"south": {"uv": [3.125, 2.75, 3.375, 4.625], "texture": "#0"},
+				"west": {"uv": [2.875, 2.75, 3.125, 4.625], "texture": "#0"},
+				"up": {"uv": [2.875, 2.75, 2.625, 2.5], "texture": "#0"},
+				"down": {"uv": [3.125, 2.5, 2.875, 2.75], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "guillotine",
+			"origin": [8, 0, 8],
+			"color": 0,
+			"nbt": "{}",
+			"children": [
+				{
+					"name": "plank",
+					"origin": [8, 0, 1.25],
+					"color": 0,
+					"nbt": "{}",
+					"children": []
+				},
+				{
+					"name": "blade",
+					"origin": [8, 0, 1.25],
+					"color": 0,
+					"nbt": "{}",
+					"children": []
+				},
+				{
+					"name": "frame",
+					"origin": [8, 0, 1.25],
+					"color": 0,
+					"nbt": "{}",
+					"children": [0, 1]
+				}
+			]
+		}
+	]
+}
