@@ -37,7 +37,7 @@ public class GuillotineBlockEntityModel extends Model {
 
     @Override
     public void render(MatrixStack matrices, VertexConsumer vertices, int light, int overlay, float red, float green, float blue, float alpha) {
-        this.guillotine.render(matrices, vertices, light, overlay);
+        // this.guillotine.render(matrices, vertices, light, overlay);
         // this.plank.render(matrices, vertices, light, overlay);
         // this.frame.render(matrices, vertices, light, overlay);
     }

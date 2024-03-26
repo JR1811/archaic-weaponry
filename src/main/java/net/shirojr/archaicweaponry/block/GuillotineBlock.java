@@ -56,8 +56,7 @@ public class GuillotineBlock extends BlockWithEntity {
 
     @Override
     public BlockRenderType getRenderType(BlockState state) {
-        if (!state.get(PART).isOrigin()) return BlockRenderType.MODEL;
-        return BlockRenderType.ENTITYBLOCK_ANIMATED;
+        return BlockRenderType.MODEL;
     }
 
     @Override
